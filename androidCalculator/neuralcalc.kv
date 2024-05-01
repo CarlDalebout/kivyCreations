@@ -1,0 +1,103 @@
+<MyRoot>
+
+  calc_field: calc_field
+
+  orientation: 'vertical'
+  TextInput:
+    id: calc_field
+    height: 200
+    size_hint: (1, None)
+    readonly: True
+    disabled: True
+    font_size: 64
+  
+  GridLayout:
+    rows: 4
+    columns: 4
+    padding: 10
+    spacing: 10
+    height: 400
+    size_hint: (1, None)
+    Button:
+      text: "7"
+      fount_size: 26
+      on_press: root.calc_symbol('7')
+    Button:
+      text: "8"
+      fount_size: 26
+      on_press: root.calc_symbol('8')
+    Button:
+      text: "9"
+      fount_size: 26
+      on_press: root.calc_symbol('9')
+    Button:
+      text: "+"
+      fount_size: 26
+      on_press: root.calc_symbol('+')
+    Button:
+      text: "4"
+      fount_size: 26
+      on_press: root.calc_symbol('4')
+    Button:
+      text: "5"
+      fount_size: 26
+      on_press: root.calc_symbol('5')
+    Button:
+      text: "6"
+      fount_size: 26
+      on_press: root.calc_symbol('6')
+    Button:
+      text: "-"
+      fount_size: 26
+      on_press: root.calc_symbol('-')
+    Button:
+      text: "1"
+      fount_size: 26
+      on_press: root.calc_symbol('1')
+    Button:
+      text: "2"
+      fount_size: 26
+      on_press: root.calc_symbol('2')
+    Button:
+      text: "3"
+      fount_size: 26
+      on_press: root.calc_symbol('3')
+    Button:
+      text: "*"
+      fount_size: 26
+      on_press: root.calc_symbol('*')
+    Button:
+      text: "("
+      fount_size: 26
+      on_press: root.calc_symbol('(')
+    Button:
+      text: "0"
+      fount_size: 26
+      on_press: root.calc_symbol('0')
+    Button:
+      text: ")"
+      fount_size: 26
+      on_press: root.calc_symbol(')')
+    Button:
+      text: "/"
+      fount_size: 26
+      on_press: root.calc_symbol('/')
+
+  BoxLayout:
+    orientation: 'horizontal'
+    padding: 7
+    spacing: 7
+    height: 100
+    size_hint: (1, None)
+    Button:
+      text: "."
+      fount_size: 26
+      on_press: root.calc_symbol('.')
+    Button:
+      text: "C"
+      fount_size: 26
+      on_press: root.clear()
+    Button:
+      text: "="
+      fount_size: 26
+      on_press: root.get_result()
